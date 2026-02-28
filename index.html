@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>SOLAR SENTINEL · OMEGA ULTIMATE</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background elements -->
+    <div class="grid"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <canvas id="particles"></canvas>
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h1>SOLAR SENTINEL</h1>
+            <div class="spinner"></div>
+            <p>INITIALIZING OMEGA PROTOCOL</p>
+        </div>
+    </div>
+
+    <!-- Login Card -->
+    <div id="loginCard" class="login-card">
+        <div class="card-header">
+            <div class="logo-area">
+                <h1>SOLAR SENTINEL</h1>
+                <p>◈ OMEGA ULTIMATE PROTOCOL ◈</p>
+            </div>
+        </div>
+        <div class="security-level">
+            <div class="level-badge"></div>
+            <div class="level-text">CLEARANCE <span>OMEGA</span></div>
+            <div class="level-badge"></div>
+        </div>
+        <form id="loginForm">
+            <div class="input-group">
+                <label>OPERATOR ID</label>
+                <input type="text" id="username" placeholder="Enter your credentials" autocomplete="off" inputmode="text">
+            </div>
+            <div class="input-group">
+                <label>PASSCODE</label>
+                <input type="password" id="password" placeholder="••••••••" inputmode="text">
+            </div>
+            <div class="twofa-sim">
+                <span>🛡️ 2FA ACTIVE</span>
+                <div class="badge">HARDWARE KEY</div>
+            </div>
+            <button type="submit" class="login-btn" id="submitBtn">ACTIVATE</button>
+        </form>
+        <div id="message" class="message-box"></div>
+        <button class="brain-games-btn" onclick="showGameMenu()">🧠 BRAIN GAMES</button>
+        <div class="footer-note">
+            <span>✦</span> AUTHORIZED PERSONNEL ONLY <span>✦</span>
+        </div>
+        <div class="footer-note" style="margin-top: 0.5rem; border-top: none; padding-top: 0;">
+            <span class="credit">Made By Shubham Maurya</span>
+        </div>
+    </div>
+
+    <!-- Main Content (hidden after login) -->
+    <div id="mainContent" class="main-content">
+        <!-- Team Section -->
+        <div class="team-section">
+            <div class="school-header">
+                <h1 class="school-name">Saraswati Shishu Vidya Mandir</h1>
+                <div class="school-place">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Dokti Dalan-Chhapra (Bairia-Ballia), U.P.</span>
+                </div>
+                <div class="class-badge">
+                    <i class="fas fa-graduation-cap"></i> Class 7th 'A'
+                </div>
+            </div>
+            <div class="team-head">
+                <div class="head-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="head-info">
+                    <h2>Shubham Maurya</h2>
+                    <p><i class="fas fa-star" style="color: #fbbf24;"></i> Team Head / Project Leader</p>
+                </div>
+            </div>
+            <div class="section-title">
+                <i class="fas fa-users"></i>
+                <span>Our Brilliant Team</span>
+            </div>
+            <div class="team-grid">
+                <div class="member-card" style="--i:1;"><div class="member-avatar"><i class="fas fa-user-tie"></i></div><div class="member-name">Lalu Yadav</div><div class="member-role">Member</div></div>
+                <div class="member-card" style="--i:2;"><div class="member-avatar"><i class="fas fa-user-astronaut"></i></div><div class="member-name">Abhay Yadav</div><div class="member-role">Member</div></div>
+                <div class="member-card" style="--i:3;"><div class="member-avatar"><i class="fas fa-user-ninja"></i></div><div class="member-name">Harsh Maurya</div><div class="member-role">Member</div></div>
+                <div class="member-card" style="--i:4;"><div class="member-avatar"><i class="fas fa-user-geek"></i></div><div class="member-name">Shaswat Patel</div><div class="member-role">Member</div></div>
+                <div class="member-card" style="--i:5;"><div class="member-avatar"><i class="fas fa-user-graduate"></i></div><div class="member-name">Anirudh Chaubey</div><div class="member-role">Member</div></div>
+            </div>
+            <div class="section-title"><i class="fas fa-calendar-alt"></i><span>Science Exhibition 2026</span></div>
+            <div class="event-detail">
+                <div class="event-left">
+                    <div class="event-icon"><i class="fas fa-flask"></i></div>
+                    <div class="event-text"><h3>ज्ञान · विज्ञान · प्रदर्शनी</h3><p>Come witness our innovative projects!</p></div>
+                </div>
+                <div class="event-date"><i class="fas fa-calendar-check"></i> 1 March 2026</div>
+            </div>
+            <div class="thankyou">
+                <h2>Thank You <span class="heart">❤️</span></h2>
+                <p>for visiting our website and supporting young innovators!</p>
+                <p style="margin-top: 1rem; font-size: 1rem; color: #3b82f6;">#FutureScientists #TeamWork</p>
+            </div>
+        </div>
+
+        <!-- Project Section (SOLAR SENTINEL Knowledge Hub) -->
+        <div class="project-section" id="projectSection">
+            <div class="header">
+                <div class="logo"><h1>SOLAR SENTINEL</h1></div>
+                <div class="toolbar">
+                    <button class="tool-btn" id="langToggle"><i class="fas fa-language"></i> <span>हिन्दी</span></button>
+                    <button class="tool-btn" id="themeToggle"><i class="fas fa-moon"></i> <span>Dark</span></button>
+                    <button class="tool-btn" id="fullscreenBtn"><i class="fas fa-expand"></i> <span>Full</span></button>
+                    <input type="color" class="color-picker" id="accentColorPicker" value="#3b82f6">
+                    <button class="donate-card" id="donateBtn"><i class="fas fa-heart"></i> Donate</button>
+                </div>
+            </div>
+
+            <div class="glass-card" id="introCard">
+                <div class="intro-text" data-en="<strong>SOLAR SENTINEL</strong> is a fusion of two powerful systems: a <strong>Solar Tracker</strong> that maximises energy capture, and an <strong>Intruder Detection & Security System</strong> that guards perimeters. Designed for autonomous operation in remote areas, it’s ideal for army deployments, border surveillance, and critical infrastructure protection." data-hi="<strong>सोलर सेंटिनल</strong> दो शक्तिशाली प्रणालियों का संगम है: एक <strong>सोलर ट्रैकर</strong> जो ऊर्जा संग्रहण को अधिकतम करता है, और एक <strong>घुसपैठिया पहचान एवं सुरक्षा प्रणाली</strong> जो परिधि की रक्षा करती है। दूरस्थ क्षेत्रों में स्वायत्त संचालन के लिए डिज़ाइन किया गया, यह सेना की तैनाती, सीमा निगरानी और महत्वपूर्ण बुनियादी ढांचे की सुरक्षा के लिए आदर्श है।"></div>
+            </div>
+
+            <h2 class="section-heading" data-en="⚡ Core Systems" data-hi="⚡ मुख्य प्रणालियाँ"></h2>
+            <div class="project-grid">
+                <div class="project-card" onclick="openProjectModal('tracker')">
+                    <div class="project-icon">☀️</div>
+                    <div class="project-title" data-en="Solar Tracker" data-hi="सौर ट्रैकर"></div>
+                    <div class="project-desc" data-en="Dual‑axis tracking using LDRs, servo motor, DHT11, and Bluetooth. Maximises solar panel efficiency by following the sun." data-hi="एलडीआर, सर्वो मोटर, डीएचटी11 और ब्लूटूथ का उपयोग कर दोहरी-अक्ष ट्रैकिंग। सूर्य का अनुसरण कर सौर पैनल दक्षता को अधिकतम करता है।"></div>
+                    <div class="importance" data-en="⚔️ Army Importance: Self‑powered surveillance posts; reduces fuel dependency; silent operation." data-hi="⚔️ सेना के लिए महत्व: स्व-संचालित निगरानी चौकियाँ; ईंधन निर्भरता कम करता है; मूक संचालन।"></div>
+                </div>
+                <div class="project-card" onclick="openProjectModal('security')">
+                    <div class="project-icon">🛡️</div>
+                    <div class="project-title" data-en="Security System" data-hi="सुरक्षा प्रणाली"></div>
+                    <div class="project-desc" data-en="Ultrasonic intruder detection, 4‑channel relay trap, buzzer alarm, and LCD display with intruder counter." data-hi="अल्ट्रासोनिक घुसपैठिया पहचान, 4-चैनल रिले जाल, बजर अलार्म, और एलसीडी डिस्प्ले जिसमें घुसपैठियों की गिनती होती है।"></div>
+                    <div class="importance" data-en="⚔️ Army Importance: Perimeter breach detection; automatic trap activation; real‑time intruder count." data-hi="⚔️ सेना के लिए महत्व: परिधि उल्लंघन का पता लगाना; स्वचालित जाल सक्रियण; वास्तविक समय घुसपैठियों की गिनती।"></div>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <button class="download-btn" id="downloadSecurity"><i class="fas fa-download"></i> <span data-en="Download Security System Code" data-hi="सुरक्षा प्रणाली कोड डाउनलोड करें"></span></button>
+                <button class="download-btn" id="downloadTracker"><i class="fas fa-download"></i> <span data-en="Download Solar Tracker Code" data-hi="सौर ट्रैकर कोड डाउनलोड करें"></span></button>
+            </div>
+
+            <h2 class="section-heading" data-en="🔩 Components" data-hi="🔩 घटक"></h2>
+            <div class="components-grid" id="compGrid"></div>
+
+            <h2 class="section-heading" data-en="⌨️ Shortcut Keys & Bluetooth Commands" data-hi="⌨️ शॉर्टकट की एवं ब्लूटूथ कमांड"></h2>
+            <div class="glass-card shortcut-info">
+                <div data-en="<strong>Bluetooth Commands (via HC-05):</strong> T20 (tolerance), M2 (max step), N50 (night threshold), R (center servo), X (reset), S (show data), STOP/START (data transmission). <br> <strong>Shortcut Keys on website:</strong> Ctrl+Shift+L (language toggle), Ctrl+Shift+T (theme), Ctrl+Shift+F (fullscreen)." data-hi="<strong>ब्लूटूथ कमांड (HC-05 के माध्यम से):</strong> T20 (टॉलरेंस), M2 (अधिकतम स्टेप), N50 (रात थ्रेशोल्ड), R (सर्वो सेंटर), X (रीसेट), S (डेटा दिखाएँ), STOP/START (डेटा ट्रांसमिशन)। <br> <strong>वेबसाइट शॉर्टकट:</strong> Ctrl+Shift+L (भाषा बदलें), Ctrl+Shift+T (थीम), Ctrl+Shift+F (फुलस्क्रीन)।"></div>
+            </div>
+
+            <div class="glass-card text-center" style="margin-top: 2rem;">
+                <h3 data-en="Support the Project" data-hi="परियोजना का समर्थन करें"></h3>
+                <p data-en="Your donations help us improve and deploy more systems for army use." data-hi="आपका दान हमें सेना के उपयोग के लिए और प्रणालियों को बेहतर बनाने और तैनात करने में मदद करता है।"></p>
+                <button class="tool-btn" style="margin: 1rem auto;" id="donateBtn2"><i class="fas fa-donate"></i> Donate Now</button>
+            </div>
+
+            <div class="footer">
+                <span class="credit">Made By Shubham Maurya</span> · SOLAR SENTINEL · 2026
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Overlay -->
+    <div id="gameOverlay" class="game-overlay">
+        <div class="game-header">
+            <h2>🧠 BRAIN GAMES</h2>
+            <button class="close-game-btn" onclick="hideGameMenu()">✕</button>
+        </div>
+        <div id="gameSelectionGrid" class="game-grid">
+            <div class="game-card" onclick="startGame('puzzle')"><span>🧩</span><h3>Puzzle (4x4)</h3></div>
+            <div class="game-card" onclick="startGame('math')"><span>🔢</span><h3>Math Challenge</h3></div>
+            <div class="game-card" onclick="startGame('gk')"><span>🌍</span><h3>GK Infinite</h3></div>
+            <div class="game-card" onclick="startGame('snake')"><span>🐍</span><h3>Snake Infinity</h3></div>
+            <div class="game-card" onclick="startGame('runner')"><span>🏃</span><h3>Runner X</h3></div>
+            <div class="game-card" onclick="startGame('memory')"><span>🧠</span><h3>Memory Master</h3></div>
+        </div>
+        <div id="gameContainer" class="game-container">
+            <button class="back-to-menu" onclick="backToGameMenu()">← BACK TO MENU</button>
+            <div id="gameContent" class="game-area"></div>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <button class="chat-toggle" id="chatToggle"><i class="fas fa-comment-dots"></i></button>
+    <div class="chat-modal" id="chatModal">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2><i class="fas fa-robot"></i><span id="botNameDisplay">SOLAR AI</span><span class="bot-name" id="botStatus">Online</span></h2>
+                <div>
+                    <button onclick="toggleCustomize()"><i class="fas fa-palette"></i></button>
+                    <button onclick="closeChat()"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-msg">Hi! I'm SOLAR AI, your project assistant. Ask me anything about components, army, or this project. You can also customize my name and color!</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Type your question..." onkeypress="if(event.key==='Enter') sendMessage()">
+                <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="customize-panel" id="customizePanel">
+        <h3>Customize AI</h3>
+        <label>Bot Name:</label><input type="text" id="botNameInput" value="SOLAR AI">
+        <label>Accent Color:</label><input type="color" id="botColorInput" value="#3b82f6">
+        <button class="tool-btn" onclick="applyCustomization()" style="width:100%;">Apply</button>
+    </div>
+
+    <!-- Modal for component/project details -->
+    <div id="componentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
