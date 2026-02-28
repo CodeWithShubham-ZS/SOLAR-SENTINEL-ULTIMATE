@@ -350,7 +350,7 @@ body {
     box-shadow: 0 15px 0 #1e3a8a, 0 0 40px #3b82f6;
 }
 .login-btn:active:not(:disabled) {
-    transform: translateY(5px);
+    transform: translateY(5px) scale(0.98);
     box-shadow: 0 6px 0 #1e3a8a, 0 0 35px #ffd966;
 }
 .login-btn:disabled {
@@ -451,8 +451,9 @@ body {
     margin-right: auto;
 }
 .brain-games-btn:active {
-    transform: translateY(4px);
+    transform: translateY(4px) scale(0.95);
     box-shadow: 0 2px 0 #5b21b6, 0 0 20px #8b5cf6;
+    filter: brightness(1.2);
 }
 
 .game-overlay {
@@ -513,8 +514,9 @@ body {
     transition: 0.1s;
 }
 .close-game-btn:active {
-    transform: translateY(4px);
+    transform: translateY(4px) scale(0.95);
     box-shadow: 0 0 0 #b91c1c;
+    filter: brightness(1.2);
 }
 
 .game-grid {
@@ -541,15 +543,7 @@ body {
 }
 .game-card:active {
     transform: scale(0.98);
-}
-.game-card span {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-.game-card h3 {
-    color: #1e293b;
-    font-size: 1.2rem;
+    filter: brightness(1.1);
 }
 
 .game-container {
@@ -577,8 +571,9 @@ body {
     transition: 0.1s;
 }
 .back-to-menu:active {
-    transform: translateY(4px);
+    transform: translateY(4px) scale(0.95);
     box-shadow: 0 1px 0 #334155;
+    filter: brightness(1.2);
 }
 
 /* ========== TEAM SECTION STYLES ========== */
@@ -777,8 +772,9 @@ body {
     transition: 0.1s ease;
 }
 .event-date:active {
-    transform: translateY(5px);
+    transform: translateY(5px) scale(0.95);
     box-shadow: 0 3px 0 #0f172a;
+    filter: brightness(1.2);
 }
 .thankyou {
     text-align: center;
@@ -879,7 +875,7 @@ body {
     transition: all 0.2s;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-.project-section .tool-btn:active { transform: scale(0.95); }
+.project-section .tool-btn:active { transform: scale(0.95); filter: brightness(1.2); }
 .project-section .tool-btn i { font-size: 1.2rem; }
 .project-section .color-picker {
     width: 40px;
@@ -905,6 +901,10 @@ body {
 .project-section .donate-card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(249,115,22,0.5);
+}
+.project-section .donate-card:active {
+    transform: scale(0.95);
+    filter: brightness(1.2);
 }
 .project-section .glass-card {
     background: var(--glass);
@@ -940,7 +940,7 @@ body {
     border-color: var(--accent);
     box-shadow: 0 25px 40px -8px var(--accent-soft);
 }
-.project-section .project-card:active { transform: scale(0.98); }
+.project-section .project-card:active { transform: scale(0.98); filter: brightness(1.1); }
 .project-section .components-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -962,7 +962,7 @@ body {
     border-color: var(--accent);
     box-shadow: 0 15px 30px -5px var(--accent-soft);
 }
-.project-section .comp-card:active { transform: scale(0.97); }
+.project-section .comp-card:active { transform: scale(0.97); filter: brightness(1.1); }
 .project-section .comp-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
 .project-section .comp-name { font-weight: 600; }
 .project-section .download-section {
@@ -987,6 +987,7 @@ body {
     gap: 0.5rem;
 }
 .project-section .download-btn:hover { transform: scale(1.05); }
+.project-section .download-btn:active { transform: scale(0.95); filter: brightness(1.2); }
 .project-section .shortcut-info {
     background: var(--surface);
     border-radius: 20px;
@@ -1038,6 +1039,10 @@ body {
     border: none;
     color: var(--text);
 }
+.close-modal:active {
+    transform: scale(0.95);
+    filter: brightness(1.2);
+}
 .pin-table {
     width: 100%;
     border-collapse: collapse;
@@ -1067,6 +1072,7 @@ body {
     z-index: 999;
 }
 .chat-toggle:hover { transform: scale(1.1); }
+.chat-toggle:active { transform: scale(0.95); filter: brightness(1.2); }
 .chat-modal {
     display: none;
     position: fixed;
@@ -1121,6 +1127,10 @@ body {
     font-size: 2rem;
     cursor: pointer;
     padding: 0.5rem;
+}
+.chat-header button:active {
+    transform: scale(0.95);
+    filter: brightness(1.2);
 }
 .chat-messages {
     flex: 1;
@@ -1208,6 +1218,7 @@ body {
     transition: 0.2s;
 }
 .chat-input-area button:hover { transform: scale(1.1); }
+.chat-input-area button:active { transform: scale(0.95); filter: brightness(1.2); }
 .customize-panel {
     position: absolute;
     top: 80px;
@@ -1234,6 +1245,10 @@ body {
     border-radius: 30px;
     background: var(--bg);
     color: var(--text);
+}
+.customize-panel button:active {
+    transform: scale(0.95);
+    filter: brightness(1.2);
 }
 
 /* ========== COMMON ANIMATIONS ========== */
@@ -1303,8 +1318,9 @@ body {
     cursor: default;
 }
 .puzzle-cell:active:not(.empty) {
-    transform: translateY(4px);
+    transform: translateY(4px) scale(0.98);
     box-shadow: 0 0 0 #1e3a8a, 0 0 25px #3b82f6;
+    filter: brightness(1.2);
 }
 .math-question {
     font-size: 2.5rem;
@@ -1331,8 +1347,9 @@ body {
     transition: all 0.1s;
 }
 .math-option:active {
-    transform: translateY(4px);
+    transform: translateY(4px) scale(0.95);
     box-shadow: 0 0 0 #1e3a8a, 0 0 25px #3b82f6;
+    filter: brightness(1.2);
 }
 .gk-question {
     font-size: 1.2rem;
@@ -1360,6 +1377,8 @@ body {
     background: #3b82f6;
     color: white;
     box-shadow: 0 0 25px #3b82f6;
+    transform: scale(0.98);
+    filter: brightness(1.2);
 }
 .snake-controls {
     display: flex;
@@ -1390,8 +1409,9 @@ body {
     justify-content: center;
 }
 .snake-btn:active {
-    transform: translateY(8px);
+    transform: translateY(8px) scale(0.95);
     box-shadow: 0 0 0 #b45309, 0 0 30px #ffd966;
+    filter: brightness(1.2);
 }
 .runner-game {
     width: 100%;
@@ -1455,6 +1475,10 @@ body {
     background: #22c55e;
     cursor: default;
     box-shadow: 0 4px 0 #166534, 0 0 20px #22c55e;
+}
+.memory-card:active:not(.matched) {
+    transform: scale(0.95);
+    filter: brightness(1.2);
 }
 .score {
     font-size: 1.2rem;
